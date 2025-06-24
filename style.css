@@ -249,3 +249,42 @@ body {
     color: #1e40af;
   }
   
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #1e40af;
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      z-index: 10;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .hero-text, .hero-image {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  
+    .hero-image img {
+      max-width: 200px;
+    }
+  }
+  

@@ -13,7 +13,8 @@
   <header>
     <nav class="navbar">
       <div class="logo">Eric Ketchadji</div>
-      <ul class="nav-links">
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
         <li><a class="active" href="index.html">Accueil</a></li>
         <li><a href="a-propos.html">À propos</a></li>
         <li><a href="projets.html">Projets</a></li>
@@ -55,5 +56,12 @@
         document.getElementById("loader").style.display = "none"; 
         type();// Cacher le loader après le chargement de la page
     }); // Appeler la fonction pour démarrer la frappe
+</script>
+<script>
+  const toggle=document.getElementById("menu-toggle");
+  const nav=document.getElementById("nav-links");
+  toggle.addEventListener("click",()=>{
+    nav.classList.toggle("active");
+  });
 </script>
 </html>
