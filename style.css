@@ -267,10 +267,15 @@ body {
       text-align: center;
       display: none;
       padding: 1rem 0;
+      z-index: 1000;
     }
   
     .nav-links.active {
       display: flex;
+    }
+
+    .navbar{
+      display: relative;
     }
   
     .menu-toggle {
