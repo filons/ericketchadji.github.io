@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets - Eric Ketchadji</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Eric Ketchadji</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="projets.html" class="active">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="projects-grid">
+    <h1>Mes projets</h1>
+
+    <div class="project">
+      <div class="carousel">
+        <img src="images/logements/l1.jpg" alt="Tâches app 1" class="active">
+        <img src="images/logements/l2.jpg" alt="Tâches app 2">
+        <img src="images/logements/l3.jpg" alt="Tâches app 3">
+        <img src="images/logements/l4.jpg" alt="Tâches app 4">
+        <img src="images/logements/l5.jpg" alt="Tâches app 5">
+        <img src="images/logements/l6.jpg" alt="Tâches app 6">
+        
+      </div>
+      <h2>App de gestion de tâches</h2>
+      <p>Une app Flutter avec rappels, notifications et base Sqflite. Interface claire pour organiser ses tâches.</p>
+    </div>
+
+    <div class="project">
+      <div class="carousel">
+        <img src="images/jeu1.jpg" alt="Jeu médical 1" class="active">
+        <img src="images/jeu2.jpg" alt="Jeu médical 2">
+      </div>
+      <h2>Jeu éducatif pour médecins</h2>
+      <p>Un jeu sérieux pour entraîner les étudiants à poser des diagnostics et traiter des cas cliniques.</p>
+    </div>
+
+    <div class="project">
+      <div class="carousel">
+        <img src="images/wp1.jpg" alt="Site colloque 1" class="active">
+        <img src="images/wp2.jpg" alt="Site colloque 2">
+      </div>
+      <h2>Site WordPress colloque</h2>
+      <p>Site événementiel avec 6 pages : Accueil, Programme, Intervenants… fait en local avec WordPress.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Eric Ketchadji</p>
+  </footer>
+
+  <script>
+    // Mini carrousel automatique sans bibliothèque
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      let imgs = carousel.querySelectorAll('img');
+      let i = 0;
+      setInterval(() => {
+        imgs[i].classList.remove('active');
+        i = (i + 1) % imgs.length;
+        imgs[i].classList.add('active');
+      }, 3000); // 3 secondes par image
+    });
+  </script>
+</body>
+</html>

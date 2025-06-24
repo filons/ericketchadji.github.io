@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric Ketchadji - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Eric Ketchadji</div>
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-text">
+      <h1><span class="typed-text"></span><span class="cursor"></span></h1>
+      
+    </div>
+    <div class="hero-image">
+      <img src="images/eric.jpg" alt="Photo de Eric Ketchadji" />
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Eric Ketchadji</p>
+  </footer>
+</body>
+<script>
+    const text ="Bonjour moi c'est Eric Ketchadji, Étudiant en Arts numériques á l'ecole nationale supérieur polytechnique de Maroua, développeur mobile et Wordpress en formation, passionné par Flutter, WordPress et la conception des jeux videos.";
+    const typedText = document.querySelector('.typed-text');
+    const cursor = document.querySelector('.cursor');
+    let index = 0;
+    function type() {
+        if (index < text.length) {
+            typedText.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 100); // Vitesse de frappe
+        } else {
+            cursor.style.display = 'none'; // Cacher le curseur après la frappe
+        }
+    }
+    
+    window.addEventListener("load",()=>{
+        document.getElementById("loader").style.display = "none"; 
+        type();// Cacher le loader après le chargement de la page
+    }); // Appeler la fonction pour démarrer la frappe
+</script>
+</html>
